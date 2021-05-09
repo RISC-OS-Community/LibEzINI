@@ -1,0 +1,47 @@
+---------------------------------------------------------------
+- Lib EzINI port to RISC OS
+- Port by Paolo Fabio Zaino 2020
+---------------------------------------------------------------
+
+_ Release 1.0.0 _
+
+-----------------------
+-  DISCLAIMER  -
+-----------------------
+
+This is a port of a LIbrary under GPL license therefore the port inherit the license and so you are also required to respect the original author license.
+
+-----------------------
+-  Intro  -
+-----------------------
+
+This library is a simpe C library to read/write and use INI fileson RISC OS and in your applications.
+
+If you do not know what an INI fil is you probably do not need this library either.
+
+If you want to know what an INI file is, it's simple. INI files are generally used to store applications configurations (that's why the INI term, which stays for INItiatization)
+
+Their structure is super simple:
+
+<key> = <value>
+
+They pre-date JSON and YAML formats and are still widely used on may platforms. The most famous one was old Windows OS which used the INI files for a lot of things. Linux also used them to allow configuration of services and applications.
+
+Here is a practical example:
+
+hostip = 192.168.0.1
+netmask = 255.255.255.0
+gateway = 192.168.0.254
+
+Here is another example:
+
+hostname = "mycomputer"
+
+So again it's simple.
+
+---------------
+- FINAL NOTES -
+---------------
+Thanks for evaluating my port and effort and eventually use it in your code, and, most of all, thanks for coding on RISC OS :)
+
+- Paolo

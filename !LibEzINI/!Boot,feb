@@ -1,0 +1,5 @@
+| Lib EzINI port to RISC OS
+| ported by Paolo Fabio Zaino 2020
+IconSprites <Obey$Dir>.!Sprites
+If "<LibEzINI$Dir>" = "" Then Set LibEzINI$Dir <Obey$Dir>
+Set LibEzINI$Path <LibEzINI$Dir>.
