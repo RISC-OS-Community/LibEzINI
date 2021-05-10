@@ -28,7 +28,7 @@ done.
 Feedback is always welcome!
 
 ### In case of problems
-For any issue you may encounter please use the Issues option here on GitHub on the top. Please do not try to contact us directly, the RISC OS Community handles all the communications here on github.
+For any issue you may encounter please use the Issues option here on GitHub. You can find it at the top of the page. Please do not try to contact us directly, the RISC OS Community handles all the communications here on GitHub.
 
 ### Requesting new features
 As for the problems reporting please use the Issues option here on GitHub also to request new features.
