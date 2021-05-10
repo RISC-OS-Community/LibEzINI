@@ -10,7 +10,7 @@ To build from the source just git clone this repo and then go to LibEzINI -> src
 To build these files with GNU make and gcc, simply double click on the file called MkGCC, before you do that make sure that your RISC OS device Filer has seen where your copy of !GCC is (usually in Apps.Development.
 
 ### Using ROOL DDE
-To build these files with ROOL DDE, simply click on the file called MkDDE, before you do that please make sure your RISC OS device Filer has executed the !SetPaths from DDE which shoul dbe placed in AcornC/C++ directory.
+To build these files with ROOL DDE, simply click on the file called MkDDE, before you do that please make sure your RISC OS device Filer has executed the !SetPaths from DDE which should be placed in AcornC/C++ directory.
 
 ## Using LibEzINI in your code
 Have a look at the file called sample in src.c, it demonstrates the usage of ezini functions.
