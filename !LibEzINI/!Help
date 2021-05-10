@@ -9,13 +9,14 @@ _ Release 1.0.0 _
 -  DISCLAIMER  -
 -----------------------
 
-This is a port of a Library under LGPL v3 license, therefore the port inherits the license.
+This is a port of a Library under LGPL v3 license, therefore the port inherits the license
 
 -----------------------
 -  Intro  -
 -----------------------
 
-This library is a simple C library to read/write and use INI files on RISC OS and in your applications.
+This is a RISC OS port of EzINI a small and easy to use ANSI C library implementing INI file reading and writing.
+This library is intended to be easy to use and build upon.  It is small in size, thus not as feature complete as other libraries, but should be sufficient to meet most requirements.
 
 If you do not know what an INI file is you probably do not need this library either.
 
@@ -38,6 +39,9 @@ Here is another example:
 hostname = "mycomputer"
 
 So again it's simple.
+
+To see how to use the library in your code please have a look at the two test files:  c.samle and c.strtest in src
+For an example of INI file syntax supported have a look at the example data-files test_strs and test_struct in src
 
 ---------------
 - FINAL NOTES -

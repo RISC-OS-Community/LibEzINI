@@ -62,9 +62,9 @@
 extern "C" {
 #endif
 
-#ifdef RISC_OS
+#ifndef __GNUC__
 /***************************************************************************
- *                            MACRO DEFINITIONS
+ *                    MACRO DEFINITIONS for ROOL DDE
  ***************************************************************************/
 
 // Add some Posix compliant definitions to keep the code consistent
