@@ -1,5 +1,5 @@
 # LibEzINI
-This is a RISC OS port of EzINI a small adn easy to use ANSI C library implementing INI file reading and writing.
+This is a RISC OS port of EzINI a small and easy to use ANSI C library implementing INI file reading and writing.
 This library is intended to be easy to use and build upon.  It is
 small in size, thus not as feature complete as other libraries, but should be sufficient to meet most requirements.
 
