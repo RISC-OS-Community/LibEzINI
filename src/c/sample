@@ -120,20 +120,20 @@ int main(int argc, char *argv[])
     AddEntryToList(&list, "struct 1", "str field", "string1");
     AddEntryToList(&list, "struct 2", "int field", "321");
 
-    printf("\nWriting test_struct/ini\n");
+    printf("\nWriting test_struct\n");
     printf("=======================\n");
 
     /* now create the ini */
-    if (0 != MakeINIFile("test_struct/ini", list))
+    if (0 != MakeINIFile("<Obey$Dir>.test_struct", list))
     {
-        printf("Error making test_struct/ini file\n");
+        printf("Error making test_struct file\n");
     }
 
     FreeList(list);
 
-    printf("\nReading test_struct.ini\n");
+    printf("\nReading test_struct\n");
     printf("=======================\n");
-    fp = fopen("test_struct/ini", "r");
+    fp = fopen("<Obey$Dir>.test_struct", "r");
 
     /* initialize entry structure before reading first entry */
     entry.section = NULL;
@@ -150,7 +150,7 @@ int main(int argc, char *argv[])
 
     if (result < 0)
     {
-        printf("Error getting entry from test_struct/ini\n");
+        printf("Error getting entry from test_struct\n");
     }
 
     for (i = 0; i < 2; i++)
@@ -161,10 +161,10 @@ int main(int argc, char *argv[])
         printf("\tmyString %s\n", my_structs[i].myString);
     }
 
-    printf("\nModifying test_struct/ini\n");
+    printf("\nModifying test_struct\n");
     printf("=======================\n");
 
-    if (0 != DeleteEntryFromFile("test_struct.ini", "struct 1", "int field"))
+    if (0 != DeleteEntryFromFile("test_struct", "struct 1", "int field"))
     {
         printf("Error deleting entry from test_struct.ini file\n");
     }
@@ -177,12 +177,12 @@ int main(int argc, char *argv[])
     AddEntryToList(&list, "struct 1", "str field", "string1A");
     AddEntryToList(&list, "struct 2", "int field", "3210");
 
-    if (0 != AddEntryToFile("test_struct/ini", list))
+    if (0 != AddEntryToFile("test_struct", list))
     {
         printf("Error deleting entry from test_struct.ini file\n");
     }
 
-    fp = fopen("test_struct/ini", "r");
+    fp = fopen("<Obey$Dir>.test_struct", "r");
 
     /* read ini file back into a structure */
     while ((result = GetEntryFromFile(fp, &entry)) > 0)

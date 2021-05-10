@@ -88,9 +88,9 @@ int strtest_main(int argc, char *argv[])
     ((void)(argc));
     ((void)(argv));
 
-    printf("Reading test_strs.ini\n");
+    printf("Reading test_strs\n");
     printf("=====================\n");
-    fp = fopen("test_strs/ini", "r");
+    fp = fopen("<Obey$Dir>.test_strs", "r");
 
     /* initialize entry structure before reading first entry */
     entry.section = NULL;
