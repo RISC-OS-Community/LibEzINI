@@ -40,7 +40,7 @@ We welcome improvements and new ideas, before you submit your changes please hav
 See https://michaeldipperstein.github.io/ezini/
 
 ## License
-The original EzINI is released under GPLv3, so is LibEzINI port here.
+The original EzINI is released under LGPLv3, so is LibEzINI port here.
 
 ## Contributors
 [![Michael](https://avatars2.githubusercontent.com/u/30029592?s=42&v=4)](https://github.com/MichaelDipperstein) - The EzINI original author
