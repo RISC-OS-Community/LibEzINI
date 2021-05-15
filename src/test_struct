@@ -1,0 +1,10 @@
+[struct 1]
+float field = 456.7890
+str field = string1A
+int field = 1234
+
+[struct 2]
+str field = string2A
+float field = 987.6543
+int field = 3210
+
