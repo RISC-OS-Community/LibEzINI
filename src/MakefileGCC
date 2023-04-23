@@ -3,26 +3,47 @@
 ############################################################################
 CC = gcc
 LD = gcc
-CFLAGS = -I. -O3 -mthrowback -Wall -Wextra -pedantic -ansi -c
+CFLAGS = -I. -O3 -Wall -Wextra -pedantic -ansi -c
 LDFLAGS = -O3 -o
+OS=RISC_OS
 
 # Treat NT and non-NT windows the same
-#ifeq ($(OS),Windows_NT)
-#	OS = Windows
-#endif
+ifeq ($(OS),Windows_NT)
+	OS = Windows
+endif
 
-#ifeq ($(OS),Windows)
-#	EXE = .exe
-#	DEL = del
-#else	#assume Linux/Unix
-#	EXE =
-#	DEL = rm -f
-#endif
-EXE =
-DEL =
+ifeq ($(debug),)
+	LDLAGS += --strip-all --discard-all
+else
+	CFLAGS += -g
+endif
+
+ifeq ($(OS),Windows)
+	EXE = .exe
+	DEL = del
+	DEL_TARGET = *.o
+	DEL_OPT =
+	TARGET = sample$(EXE) strtest$(EXE)
+	DEL_TARGET1 = *.o
+	DEL_TARGET2 = $(TARGET)
+else ifeq ($(OS),RISC_OS)
+	EXE =
+	DEL = wipe
+	DEL_OPT = ~C F
+	CFLAGS += -mthrowback
+	TARGET = sample$(EXE) strtest$(EXE)
+	DEL_TARGET1 = o.* $(DEL_OPT)
+	DEL_TARGET2 = $(TARGET) $(DEL_OPT)
+else	#assume Linux/Unix
+	EXE =
+	DEL = rm
+	DEL_OPT = -f
+	TARGET = sample$(EXE) strtest$(EXE)
+	DEL_TARGET1 = $(DEL_OPT) *.o
+	DEL_TARGET2 = $(DEL_OPT) $(TARGET)
+endif
 
 
-TARGET = sample$(EXE) strtest$(EXE)
 
 all:		$(TARGET)
 
@@ -46,5 +67,5 @@ docs:		doxygen.conf ezini.c ezini.h sample.c strtest.c
 		doxygen $<
 
 clean:
-		$(DEL) *.o
-		$(DEL) $(TARGET)
+		$(DEL) $(DEL_TARGET1)
+		$(DEL) $(DEL_TARGET2)
