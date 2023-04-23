@@ -20,6 +20,8 @@ This library is intended to be easy to use and build upon.  It is small in size,
 
 If you do not know what an INI file is you probably do not need this library either.
 
+!ConfX utility (for example) writes INI files, so if you wish to use !ConfX to configure your app then EzINI is goin to be very useful to you.
+
 If you want to know what an INI file is, it's simple. INI files are generally used to store applications configurations (hence the INI term, which stands for INItiatization)
 
 Their structure is super simple:
@@ -42,6 +44,22 @@ So again it's simple.
 
 To see how to use the library in your code please have a look at the two test files:  c.samle and c.strtest in src
 For an example of INI file syntax supported have a look at the example data-files test_strs and test_struct in src
+
+---------------------
+- Include libEzINI --
+---------------------
+
+In your C code:
+
+#include "LibEzINI:ezini.h"
+
+In your Makefile (for GCC):
+
+gcc -o myapp myapp.c -L LibEzINI:libezini.a
+
+In your Makefile (for DDE):
+
+link -o myapp o.myapp LibEzINI:o.EzINIlib
 
 ---------------
 - FINAL NOTES -

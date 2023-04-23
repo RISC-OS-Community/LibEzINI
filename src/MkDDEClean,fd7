@@ -3,4 +3,7 @@ WimpSlot -min 2048k
 amu clean -f MakeFileDDE
 stripdepnd MakeFileDDE
 
+IfThere @.^.!LibEzINI.o.* Then wipe @.^.!LibEzINI.o.* ~C F
 
+IfThere @.Export Then Wipe @.Export.* ~C F R
+IfThere @.Export Then Wipe @.Export ~C F

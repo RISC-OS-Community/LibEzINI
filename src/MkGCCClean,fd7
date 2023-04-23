@@ -1,0 +1,8 @@
+Dir <Obey$Dir>
+WimpSlot -min 2048k
+
+IFthere @.o.* Then Wipe @.o ~C F R
+IFthere @.sample Then Wipe @.sample ~C F
+IFthere @.strtest Then Wipe @.strtest ~C F
+IFThere @.^.!LibEzINI.a.* Then Wipe @.^.!LibEzINI.a.* ~C F
+
